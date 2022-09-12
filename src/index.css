@@ -1,0 +1,178 @@
+@import "minireset.css";
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Rubik&display=swap');
+
+/* Vite defaults */
+:root {
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Custom */
+h1, h2, h3, h4, h5 {
+  font-family: 'Fascinate', cursive;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  color: #1A1A1A;
+  background-color: white;
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-bottom: 1rem;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  background-color: unset;
+  color: #1A1A1A;
+  border: 3px solid rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1A1A1A;
+  color: white;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  
+  min-height: 100vh;
+  position: relative;
+}
+
+.surfboard-wrapper {
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.surfboard {
+  position: absolute;
+  min-height: 799px;
+  min-width: 414px;
+  padding: 2rem;
+
+  /* https://stackoverflow.com/a/42121193 */
+  top: 50%;
+  right: 50%;
+  transform: translate(50%,-50%);
+}
+
+.wave {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+
+.menu {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.font-big {
+  font-size: 5rem;
+}
+
+.font-subtitle {
+  font-size: 2rem;
+}
+
+.centered {
+  text-align: center;;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+hr {
+  padding: 1px;
+  width: 100%;
+  background-color: #1A1A1A;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.menu-wrapper {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.menu {
+  width: 414px;
+  margin: 0 32px;
+}
+
+.flex-end {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding-bottom: 48px;
+
+  border-bottom: 3px solid rgba(0, 0, 0, 0.9);
+}
+
+.flex-start {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  padding-top: 48px;
+}
+
+.stretch {
+  align-self: stretch;
+  width: 100%
+}
+
+.px-4 {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+/* #0099FF */
