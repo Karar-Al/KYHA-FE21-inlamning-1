@@ -1,9 +1,4 @@
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Index from "@/routes/index.jsx";
 import Products from "./routes/products.jsx";
@@ -14,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Header />
+        <Header />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/products" element={<Products />} />
