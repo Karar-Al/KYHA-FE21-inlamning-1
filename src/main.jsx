@@ -1,6 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
+
+import 'normalize.css' // Normalizes CSS.
+import 'minireset.css' // Gives us some nice CSS defaults.
+
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(

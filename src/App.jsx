@@ -1,32 +1,26 @@
-import { useState } from "react";
+import {
+  BrowserRouter,
+  Route,
+  Routes,
 
-import Vector from "./assets/Vector.svg";
-import Wave from "./assets/wave_1.svg";
+} from "react-router-dom";
+
+import Index from "@/routes/index.jsx";
+import Products from "./routes/products.jsx";
+import Header from "./components/header.jsx";
+import NotFound from "./routes/404.jsx";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
-      <div className="surfboard-wrapper">
-        <img src={Vector} className="surfboard" />
-      </div>
-      <img src={Wave} className="wave" />
-
-      <div className="menu-wrapper">
-        <div className="menu">
-          <div className="centered grow flex-end stretch">
-            <h1>ada</h1>
-            <p className="font-subtitle">Surfboards</p>
-          </div>
-
-          <div className="grow flex-start stretch px-4">
-            <button className="stretch">Products</button>
-            <button className="stretch">About</button>
-            <button className="stretch">FAQ</button>
-          </div>
-        </div>
-      </div>
+      <BrowserRouter>
+      <Header />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

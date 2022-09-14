@@ -1,13 +1,12 @@
-@import "minireset.css";
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Rubik&display=swap');
 
 /* Vite defaults */
 :root {
   font-weight: 400;
+  letter-spacing: 0.035em;
 
   color-scheme: light dark;
 
-  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -47,7 +46,6 @@ button {
 
   border-radius: 4px;
   padding: 8px 16px;
-  margin-bottom: 1rem;
 
   font-size: 1.5rem;
   font-weight: 700;
@@ -63,6 +61,10 @@ button:hover {
   color: white;
 }
 
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -72,18 +74,17 @@ button:hover {
 }
 
 .surfboard-wrapper {
-  position: absolute;
   overflow: hidden;
   height: 100%;
   width: 100%;
-  z-index: -1;
 }
 
 .surfboard {
-  position: absolute;
+  position: fixed;
   min-height: 799px;
   min-width: 414px;
   padding: 2rem;
+  z-index: -1;
 
   /* https://stackoverflow.com/a/42121193 */
   top: 50%;
@@ -92,13 +93,22 @@ button:hover {
 }
 
 .wave {
-  position: absolute;
-  z-index: -1;
   width: 100%;
+  min-width: 1000px;
+}
+
+.menu-wrapper {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%
 }
 
 .menu {
   height: 100vh;
+  position: absolute;
+  width: 414px;
+  margin: 0 32px;
 
   display: flex;
   flex-direction: column;
@@ -113,6 +123,18 @@ button:hover {
 
 .font-subtitle {
   font-size: 2rem;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-prose {
+  line-height: 125%;
 }
 
 .centered {
@@ -133,15 +155,8 @@ hr {
   flex-grow: 1;
 }
 
-.menu-wrapper {
-  display: flex;
-  justify-content: center;
-  
-}
-
-.menu {
-  width: 414px;
-  margin: 0 32px;
+.grow-0 {
+  flex-grow: 0;
 }
 
 .flex-end {
@@ -165,14 +180,119 @@ hr {
   padding-top: 48px;
 }
 
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .stretch {
-  align-self: stretch;
   width: 100%
+}
+
+.gap-0\.5 {
+  gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
 }
 
 .px-4 {
   padding-left: 32px;
   padding-right: 32px;
+}
+
+.px-2 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.flex-1 {
+  flex: 1 1 0;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+header h1 {
+  position: absolute;
+  width: 100%;
+  color: white;
+  font-size: 4rem;
+}
+
+header a {
+  color: inherit !important;
+}
+
+.is-128x128 {
+  width: 128px;
+  height: 128px
+}
+
+.is-196x196 {
+  width: 196px;
+  height: 196px
+}
+
+.image img {
+  width: auto;
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+button.blue {
+  background-color: #0099FF;
+  border: none;
+  color: white;
+  padding: 8px;
+}
+
+figure.placeholder {
+  border-radius: 8px;
+  background-image: url(/wave_3.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-position-x: right;
+}
+
+@media (min-width: 1024px) {
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:.px-4 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 
 /* #0099FF */
