@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
+import { formatToCurrency } from "@/scripts/intl.js";
 import placeholder from "@/assets/image.svg";
 
 function Products() {
@@ -18,8 +20,6 @@ function Products() {
 
   return (
     <div className="px-2 lg:px-4 flex flex-col gap-2">
-      <h1 className="font-subtitle">Products</h1>
-
       <div className="flex flex-col gap-1 lg:flex-row">
         {products.map((entry) => (
           <article key={entry.title} className="flex gap-1 flex-1">
@@ -28,8 +28,11 @@ function Products() {
             </figure>
             <div className="flex flex-col align-start gap-0.5">
               <strong className="font-subtitle">{entry.title}</strong>
-              {/* Intl https://www.youtube.com/watch?v=acemrBKuDqw */}
-              <button className="blue">{new Intl.NumberFormat(undefined, {style: 'currency', currency: 'SEK'}).format(entry.price)}</button>
+              <Link to="/checkout">
+                <button className="blue">
+                  {formatToCurrency(entry.price)}
+                </button>
+              </Link>
               <p className="font-light">{entry.description}</p>
             </div>
           </article>
@@ -40,6 +43,11 @@ function Products() {
           <strong className="font-subtitle font-semibold">
             Our boards, one guarantee
           </strong>
+
+          {/* If we were to have a page for more products than one,
+           * then we could consider using MDX instead.
+           */}
+
           <p className="font-prose">
             All of our boards come with the greatest in mind, for you and yours
             truly. Here's some more random lorem ipsum but it's Bob Ross...

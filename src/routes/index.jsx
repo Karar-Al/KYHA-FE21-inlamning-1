@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import "@/styles/routes/index.css";
+
 function Index() {
   return (
     <>

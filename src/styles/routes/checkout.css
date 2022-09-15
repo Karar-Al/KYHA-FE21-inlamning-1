@@ -1,0 +1,23 @@
+td {
+  padding: 0.5rem !important;
+}
+
+/* https://stackoverflow.com/a/3084318 */
+tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Adding some spacing between tbody and tfoot,
+ * like in the Figma design.
+ * https://codepen.io/sinsedrix/pen/AEmKoY
+ */
+tbody::after {
+  content: ".";
+  visibility: hidden;
+}
+
+tfoot {
+  border-color: black;
+  border-top: 1px solid;
+  border-radius: 990821px; /* Doesn't matter */
+}
