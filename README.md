@@ -1,5 +1,7 @@
 # KYHA FE21 - Frontend Projekt - Inlämning 1
 
+![ada Surfboards](https://trollface.tf/BGmejMjwP0Mn.png)
+
 To run this program, `npm install && npm run dev`.
 
 To build "production", `npm run build` and test it out using `npx serve dist`. [NPM serve module.](https://www.npmjs.com/package/serve)
