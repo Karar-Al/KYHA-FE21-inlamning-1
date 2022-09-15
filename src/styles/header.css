@@ -1,0 +1,35 @@
+
+header h1 {
+  position: absolute;
+  width: 100%;
+  color: white;
+  font-size: 4rem;
+}
+
+header a {
+  color: inherit !important;
+}
+
+.surfboard-wrapper {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.surfboard {
+  position: fixed;
+  min-height: 799px;
+  min-width: 414px;
+
+  z-index: -1;
+
+  /* https://stackoverflow.com/a/42121193 */
+  top: 50%;
+  right: 50%;
+  transform: translate(50%,-50%);
+}
+
+.wave {
+  width: 100%;
+  min-width: 1000px;
+}
