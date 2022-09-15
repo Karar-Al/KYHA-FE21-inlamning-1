@@ -14,7 +14,7 @@ function Index() {
 
           <div className="grow flex-start stretch px-4">
             <Link to="/products">
-              <button className="stretch mb-1">Products</button>
+              <button className="stretch mb-1 blue p-2">BUY YOUR LEGEND</button>
             </Link>
             <Link to="/about">
               <button className="stretch mb-1">About</button>
