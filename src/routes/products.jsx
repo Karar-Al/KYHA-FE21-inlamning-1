@@ -26,7 +26,7 @@ function Products() {
             <figure className="placeholder image is-128x128">
               <img src={placeholder} alt="" />
             </figure>
-            <div className="flex flex-col align-start gap-0.5">
+            <div className="flex-1 flex flex-col align-start gap-0.5">
               <strong className="font-subtitle">{entry.title}</strong>
               <Link to="/checkout">
                 <button className="blue">
