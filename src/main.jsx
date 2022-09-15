@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
+import App from './app'
 
 import 'normalize.css' // Normalizes CSS.
 import 'minireset.css' // Gives us some nice CSS defaults.
